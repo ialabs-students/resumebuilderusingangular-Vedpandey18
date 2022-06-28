@@ -1,0 +1,82 @@
+   <!-- CV Template -->
+   <div class="container" id="cv-template">
+    <div class="row">
+        <div class="col-md-4 text-center py-5 background">
+            <!-- first col -->
+            <img src="profile_pic.png" alt="" class="img-fluid myimg" id="imgTemplate">
+            <hr />
+
+            <div class="container mt-3  col-md-6">
+                <b>Name- </b>
+                <p id="nameT1 "[(ngModel)]="resumeData.name">Ved Pandey</p>
+                <b>Mobile- </b>
+                <p id="contactT" [(ngModel)]="resumeData.contact">941260890</p>
+                <b>Email-</b>
+                <p id="emailT" [(ngModel)]="resumeData.email">ved@gmail.com</p>
+                <b>Address-</b>
+                <p id="addressT"[(ngModel)]="resumeData.address">Bengaluru</p>
+                <hr />
+                <h4>Skills</h4>
+                <p id="skillT"[(ngModel)]="resumeData.Skills"><b>java,angular</b></p>
+                <hr />
+                <h4>Social</h4>
+                <p class="fa fa-facebook-square" id="instaT" [(ngModel)]="resumeData.insta"><a href="#1"> www.Facebook.com</a></p>
+                <p class="fa fa-instagram" id="fbT"[(ngModel)]="resumeData.fb"><a href="#1"> www.Instagram.com</a></p>
+                <p class="fa fa-linkedin-square" id="linkedT"[(ngModel)]="resumeData.linkedin"><a href="#1"> www.LinkedIn.com</a></p>
+            </div>
+        </div>
+        <div class="col-md-8 py-5">
+            <!-- second col -->
+            <h1 id="nameT2" class="text-center" style="font-weight:800" [(ngModel)]="resumeData.name2">
+                Ved Pandey</h1>
+
+            <!-- objective card -->
+            <div class="card mt-4">
+                <div class="card-body background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body" [(ngModel)]="resumeData.Objective" >
+                    <p id="objectiveT"  [(ngModel)]="resumeData.p" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi distinctio
+                        consequatur soluta
+                        repellat, hic debitis necessitatibus ut eaque deleniti tempore nulla enim ipsam atque
+                        accusamus itaque ipsum veritatis labore unde!</p>
+                </div>
+            </div>
+
+            <!-- work Experience -->
+            <div class="card mt-4">
+                <div class="card-body background">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card-body"  [(ngModel)]="resumeData.Experience" >
+                    <ul id="weT"  [(ngModel)]="resumeData.ul" >
+                        <li  [(ngModel)]="resumeData.li" >Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Academic Qualification -->
+            <div class="card mt-4">
+                <div class="card-body background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body" [(ngModel)]="resumeData.Qualification">
+                    <ul id="aqT" [(ngModel)]="resumeData.ul">
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                        <li [(ngModel)]="resumeData.li">Lorem ipsum dolor.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+                <button onclick="printCV()" class="btn-lg background">Print CV</button>
+            </div>
+
+        </div>
+    </div>
+</div>

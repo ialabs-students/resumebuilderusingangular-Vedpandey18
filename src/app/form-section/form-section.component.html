@@ -1,0 +1,114 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- CV-form -->
+    <!-- putting everything inside a container -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">Fill Your Informations Here</p>
+        <form action="" id="regForm" onsubmit="handelOnSubmitEvent(event)">
+            <div class="row">
+                <!-- for creating 6 columns out of 12 -->
+                <div class="col-md-6">
+                    <!-- First column -->
+                    <h3>Personal Information</h3>
+                    <div class="form-group">
+                        <label for="nameField">Your Name</label>
+                        <input type="text" id="nameField" placeholder="Enter Name" class="form-control"
+                            [(ngModel)]="formData.name">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="contactField">Your Contact Number</label>
+                        <input type="text" id="contactField" placeholder="Enter Mobile Number" class="form-control"
+                            [(ngModel)]="formData.contact">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="emailField">Your Email</label>
+                        <input type="text" id="emailField" placeholder="Enter Email" class="form-control"
+                            [(ngModel)]="formData.email">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="addressField">Your Address</label>
+                        <textarea type="text" id="addressField" placeholder="Enter Address" class="form-control"
+                            [(ngModel)]="formData.address">
+                    </textarea>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="">Select Your Profile Picture</label>
+                        <input id="imgField" type="file" class="form-control">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="skillField">Your Skills</label>
+                        <textarea type="text" id="skillField" placeholder="Enter skills" class="form-control"
+                            [(ngModel)]="formData.Skills">
+                    </textarea>
+                    </div>
+
+                    <p class="text-secondary my-3">Important links</p>
+
+                    <div class="form-group mt-2">
+                        <label for="fbField">Facebook Link</label>
+                        <input type="text" id="fbField" placeholder="Enter Here" class="form-control"
+                            [(ngModel)]="formData.fb">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="instaField">Instagram Link</label>
+                        <input type="text" id="instaField" placeholder="Enter Here" class="form-control"
+                            [(ngModel)]="formData.insta">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="LinkedField">LinkedIn</label>
+                        <input type="text" id="linkedField" placeholder="Enter Here" class="form-control"
+                            [(ngModel)]="formData.linkedin">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Second column -->
+                    <h3>Professional Information</h3>
+                    <div class="form-group mt-2">
+                        <label for="">Objective</label>
+                        <textarea id="objectiveField" placeholder="Write Something" class="form-control" rows="4"
+                            [(ngModel)]="formData.Objective"></textarea>
+                    </div>
+                    <div class="form-group mt-2" id="we">
+                        <label for="">Work Experience</label>
+                        <textarea placeholder="Enter here" class="form-control weField" rows="4"
+                            [(ngModel)]="formData.Experience"></textarea>
+                        <!-- new textarea -->
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                    <div class="form-group mt-2" id="aq">
+                        <label for="">Academic Qualification</label>
+                        <textarea placeholder="Enter here" class="form-control eqField" rows="4"
+                            [(ngModel)]="formData.Qualification"></textarea>
+                        <!-- new textarea -->
+                        <div class="container text-center mt-2" id="aqAddButton">
+                            <button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  text-center mt-3">
+                <button (submit)="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+            </div>
+        </form>
+    </div>
+
+ 
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+
+</body>
